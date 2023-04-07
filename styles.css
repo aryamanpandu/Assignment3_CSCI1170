@@ -1,0 +1,627 @@
+/* Universal selector to set the background color and the font color for all elements */
+.background {
+    background-color: #72A0C1;
+    color: #1A2421;
+}
+
+.hero_image {
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    background-image: url("images/hero_image_beach.jpg");
+}
+
+.hero_image a {
+    color: white;
+}
+
+/* selection pseudo element selector to change the background color and the font whenever text is selected */
+::selection { /*pseudo element selector*/
+    background: #39393D;
+    color: #DCDCD9;
+}
+
+/* nav container which uses flexbox to style the navigation bar and makes it in such a way that*/
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-shrink: 2;
+    gap: 40px;
+    padding: 7px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 2px solid #DCDCD9;
+    border-radius: 10px;
+    flex-basis: max(150px);
+}
+
+/* flexbox container inside the nav container for alignment */
+nav > .name { /*child selector*/
+    margin-right: 350px;
+
+}
+
+/* flexbox container inside the nav container for alignment */
+nav > .home { /*child selector*/
+    padding-left: 10px;
+    padding: 25px;
+    margin-right: 22px;
+    border: 2px solid #DCDCD9;
+    border-radius: 10px;
+}
+
+/* flexbox container inside the nav container for alignment */
+nav > .projects { /*child selector*/
+    padding: 25px;
+    border: 2px solid #DCDCD9;
+    border-radius: 10px;
+}
+
+/* flexbox container inside the nav container for alignment */
+nav > .resources { /*child selector for readme*/
+    border: 2px solid #DCDCD9;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* first image I styled (it is the first image on the index.html page) */
+.img1 { 
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    border: 2px solid dimgray;
+    float: left;
+    border-radius: 10px;
+}
+
+/* this is the paragraph that is to be shown with the first image.
+ It adds padding and border to the text. it also aligns the text to it*/
+.para1 {
+    padding: 200px;
+    padding-left: 500px;
+    text-align: center;
+    border: 2px solid #DCDCD9;
+    border-radius: 10px;
+}
+
+/* this is the image on the Previous_Projects.html to be shown. 
+It adds the padding, margin, and uses float to align the image on the left. it also rounds the borders */
+.img2 {
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    float:left;
+    border: 2px solid dimgray;
+    border-radius: 10px;
+}
+
+/* this is the paragraph with the image on the Previous_Projects.html to be shown on the right.
+It uses padding and border and rounds the border.*/
+.para2 {
+    padding: 200px;
+    padding-left: 500px;
+    border: 2px solid #DCDCD9;
+    border-radius: 10px;
+}
+
+/* this uses the image with the attribute alt having "cute" and sets the border, padding and margin of it.*/
+img[alt ~= "cute"] { /* use of attribute selector */
+    border: 0.5rem outset dimgray;
+    padding: 10px;
+    margin: 2px;
+}
+
+/* this is to clear the text that is not to be shown on the side of the images */
+#nofloat {
+    clear: both;
+}
+
+/* this blurs the whole home box whenever the cursor hovers over it*/
+.home:hover {
+    filter: blur(1px);
+    opacity: .5;
+}
+
+/* this blurs the whole resources box whenever the cursor hovers over it*/
+.resources:hover {
+    filter: blur(1px);
+    opacity: .5;
+}
+
+/* this blurs the whole projects box whenever the cursor hovers over it*/
+.projects:hover {
+    filter: blur(1px);
+    opacity: .5;
+}
+
+/*styles the ordered list by adding background color and padding */
+ol {
+  background: #545b5b;
+  padding: 20px;
+}
+
+/*styles the ordered list elements by adding background color and padding,margin and font*/
+ol li { 
+  background: rgba(0,0,0,0.4);
+  color: #DCDCD9;
+  padding: 5px;
+  margin: 5px;
+}
+
+/*gives background color to the links inside ordered lists*/
+.a-inside-ol {
+    background: rgba(0,0,0,0.4);
+}
+
+/*styles the ordered list by adding background color and padding */
+ul {
+  background: #4f4542;
+  padding: 20px;
+}
+
+/*styles the ordered list elements by adding background color and padding,margin and font*/
+ul li {
+    background: rgba(0,0,0,0.4);
+    color: #DCDCD9;
+    margin: 5px;
+}
+
+/* makes the link with the target attribute = "_blank" a font colour and give the background color */
+a[target = "_blank"] { /* attribute selector */
+    background: rgba(0,0,0,0.4);
+    color: #DCDCD9;
+}
+
+/* makes the links with the target attribute = "_blank" green when hovering over them */ 
+a[target = "_blank"]:hover { /*attribute selector*/
+    color: green;
+}
+
+/* makes the links green when hovering over them */
+a:hover {
+    color: green;
+}
+
+/* uses flexbox and wraps the whole content inside of it and uses padding */
+#parent-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* gives all the label attributes padding and displays them as an inline block*/
+label {
+    padding: 10px;
+    display: inline-block;
+}
+
+/* gives padding to form*/
+form {
+    padding: 10px;
+}
+
+/* gives the width of the input whose attribute is text */
+input[type = "text"] {
+    width: 400px;
+}
+
+/* gives width backround color, font color and padding,margin changes the cursor to a pointer when it goes on top of it.*/
+input[type="submit"] {
+   width: 200px;
+   background-color: #e31c20;
+   color: white;
+   padding: 15px;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+/*changes the background color to a different color when it hovers on top of the submit attribute of the input*/
+input[type = "submit"]:hover {
+    background-color: #c8373a;
+}
+
+/*provides padding border and border-radius to the text-container class inside the div with the id "wrapper"*/
+#wrapper-parent > .text-container {
+    padding: 10px;
+    border: 2px solid #DCDCD9;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* provides border, width, padding and color to table, td, th elements using multiple selector*/
+table , th , td { /* multiple selector*/
+    border: 2px solid black;
+    width: 50%;
+    padding: 10px;
+    color: #DCDCD9;
+
+}
+
+/* aligns the text to left and provides background color to td*/
+td {
+    text-align: left;
+    background: #324630;
+}
+
+/* increases the height and changes the background color for th*/
+th {
+    height: 50px;
+    background: #4f4542;
+}
+
+/* collapses the border for table to remove the double borders and provides margin and box shadow to make it look 3-D*/
+table {
+    border-collapse: collapse;
+    margin: 5px;
+    box-shadow: 10px 10px #545b5b;
+}
+
+/* provides padding, border and rounds the border. It also aligns the text to center*/
+.text-container {
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #DCDCD9;
+    border-radius: 10px;
+}
+
+/* it provides padding border and changes the display to grid. It also rounds the border and provides the grid columns*/
+.grid-container {
+    padding: 20px;
+    border: 2px solid #DCDCD9;
+    border-radius: 10px;
+    display: grid;
+    grid-column: auto auto;
+    grid-template-areas: "text vid";
+}
+
+/* provides the grid area name for the grid-text class */
+.grid-text {
+    grid-area: text;
+}
+
+/* provides the grid area name for the grid-text class*/
+.grid-vid {
+    padding:10px;
+    grid-area: vid;
+}
+
+/* uses adjacent sibling selector to change the font color to yellow of the sibling */
+.sibling1 + .sibling2 { /* adjacent sibling selector*/
+    color: #702212;
+}
+
+/* uses general sibling selector to change the font color to forestgreen of the sibling */
+.sibling1 ~ .sibling3 { /* general sibling selector*/
+    color: #1D650C;
+}
+
+
+/* creates a text area so that the user can tell what they really liked about the show they picked */
+#show_review {   
+    width: 195px;
+    border: black outset;
+}
+
+/* creates a grid for the images for gallery */
+#gallery_grid {
+    display: grid;
+    width: 100%;
+    gap: 30px;  
+    grid-template-areas: "image1 image2 image3";
+}
+
+/* first image in gallery*/
+#grid_image1 {
+    grid-area: image1;
+}
+
+/* second image in gallery*/
+#grid_image2 {
+    grid-area: image2;
+}
+
+/* third image in gallery*/
+#grid_image3 {
+    grid-area: image3;
+}
+
+/**/
+.gallery_image:hover{
+    border: 2px solid black;
+}
+
+/*changing background color for palette1*/
+.palette1 {
+    background-color: #72A0C1;
+}
+/*changing background color for palette1 navigation bar*/
+.palette1nav {
+    background-color: #FFB400;
+}
+/*changing background color for palette2*/
+.palette2 {
+    background: #2A9D8F;
+}
+/*changing background color for palette2 navigation bar*/
+.palette2nav {
+    background-color: #E76F51;
+}
+/*changing background color for palette3*/
+.palette3 {
+    background-color: #E9E6FF;
+}
+/*changing background color for palette3 navigation bar*/
+.palette3nav {
+    background-color: #3D2B3D;
+    color: white;
+}
+
+
+
+
+/* media queries for phone view*/
+@media screen and (max-width:600px) {
+    html,body {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .nav .name {
+     display: none;
+    }
+
+    .nav {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        gap: 0px;
+        padding: 0px;
+        grid-template-areas: 
+        "home project resource";
+        
+    }
+
+    .nav .home {
+        padding: 10px;
+        border: 2px solid #DCDCD9;
+        border-radius: 10px;
+        margin-right: -40px;
+        grid-area: home;
+    }
+    
+    /* flexbox container inside the nav container for alignment */
+    .nav .projects {
+        padding: 10px;
+        border: 2px solid #DCDCD9;
+        border-radius: 10px; 
+        grid-area: project;
+    }
+    
+    /* flexbox container inside the nav container for alignment */
+    .nav .resources { 
+        border: 2px solid #DCDCD9;
+        padding: 10px;
+        border-radius: 10px;
+        grid-area: resource;
+    }
+
+    .img2 img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .img2 {
+        border: none;
+        margin-left: 20vw;
+    }
+
+    .para2 {
+        padding: 10px;
+        border: none;
+    }
+
+    #gameText{
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #DCDCD9;
+        border-radius: 10px;
+        width: auto;
+        margin: 10px;
+    }
+
+
+
+    #under{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    iframe{
+        width: auto;
+    }
+
+    .grid-container {
+        display: grid;
+        padding: 10px;
+        grid-template-areas: 
+        "vid"
+        "text";
+    }
+
+    .hero_image {
+        display: grid;
+        border: 2px solid #DCDCD9;
+        border-radius: 10px;
+        grid-template-areas:
+        "img1"
+        "para1";
+    }
+
+
+    .img1 {
+        justify-self: center;
+        align-self: center;
+        margin-top: 10px;
+        margin-left: 0px;
+        grid-area: img1;
+        padding: 0%;
+    }
+
+    .para1 {
+        grid-area: para1;
+        padding: 0%;
+        color: #1A2421;
+        border: none;
+        padding: 10px;
+    }
+
+    .img3 {
+        width: 85vw;
+    }
+
+    input[type = "text"] {
+        width: auto;
+    }
+
+    textarea {
+        resize: both;
+        max-width: 100%;
+        max-height: 100%;
+        height: 100px;
+    }
+
+}
+
+/* media queries for tablet view*/
+@media screen and (max-width: 1020px) and (min-width: 601px) {
+
+    html,body {
+        width: 100%;
+        margin: 0px;
+    }
+    
+    .nav {
+        display: grid;
+        width: 100%;
+        justify-content: space-between;
+        gap: 0px;
+        padding: 0px;
+        grid-template-areas: 
+        "name home project resource";  
+    }
+   
+    .nav .name {
+        grid-area: name;
+        margin: 0px;
+    }
+
+    .nav .home {
+        padding: 10px;
+        border: 2px solid #DCDCD9;
+        border-radius: 10px;
+        margin: 0%;
+        grid-area: home;
+    }
+    
+    /* flexbox container inside the nav container for alignment */
+    .nav .projects {
+        padding: 10px;
+        border: 2px solid #DCDCD9;
+        border-radius: 10px; 
+        grid-area: project;
+    }
+    
+    /* flexbox container inside the nav container for alignment */
+    .nav .resources { 
+        border: 2px solid #DCDCD9;
+        padding: 10px;
+        border-radius: 10px;
+        grid-area: resource;
+    }
+
+    .img2 img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .img2 {
+        border: none;
+        margin-left: 33vw;
+    }
+
+    .para2 {
+        padding: 10px;
+        border: none;
+    }
+
+    #gameText{
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #DCDCD9;
+        border-radius: 10px;
+        width: auto;
+        margin: 10px;
+    }
+
+
+
+    #under{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    iframe{
+        width: auto;
+    }
+
+    .grid-container {
+        display: grid;
+        padding: 10px;
+        grid-template-areas: 
+        "vid"
+        "text";
+    }
+
+    .hero_image {
+        display: grid;
+        border: 2px solid #DCDCD9;
+        border-radius: 10px;
+        grid-template-areas:
+        "img1"
+        "para1";
+    }
+
+
+    .img1 {
+        justify-self: center;
+        align-self: center;
+        margin-top: 10px;
+        margin-left: 0px;
+        grid-area: img1;
+        padding: 0%;
+    }
+
+    .para1 {
+        grid-area: para1;
+        padding: 0%;
+        color: #1A2421;
+        border: none;
+        padding: 10px;
+    }
+
+
+    input[type = "text"] {
+        width: auto;
+    }
+
+}
+
+/*Desktop view is default so media queries are not required*/
